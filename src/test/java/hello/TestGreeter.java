@@ -1,6 +1,8 @@
 package hello;
 
 import static org.junit.Assert.*;
+
+import application.Greeter;
 import org.junit.Before;
 import org.junit.Test;
 

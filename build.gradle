@@ -32,7 +32,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 
-mainClassName = 'hello.HelloWorld'
+mainClassName = 'application.ApplicationStart'
 
 // tag::repositories[]
 repositories {
@@ -54,7 +54,19 @@ targetCompatibility = 1.7
 dependencies {
     compile "joda-time:joda-time:2.2"
     testCompile "junit:junit:4.12"
+
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.20'
+
+    implementation(group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.4')
+    implementation(group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.11.4')
+
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.6'
+
+    implementation(group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.8.0')
 }
+
 // end::dependencies[]
 
 // tag::wrapper[]
